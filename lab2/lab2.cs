@@ -22,7 +22,6 @@ namespace lab3_idz1
         {
             if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
             {
-                Process.Start("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
                 Application.Exit();
             }
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
