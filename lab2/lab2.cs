@@ -20,20 +20,20 @@ namespace lab3_idz1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text == "")
-            {
-                Application.Exit();
-            }
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
-            { 
-            textBox4.Text = "";
-            double a = 0;
+           
             textBox4.Text = "Лабораторная работа 2(Баканов А.В.)" + Environment.NewLine + "Индивидуальное задание 3";
-            double x = double.Parse(textBox1.Text);
-            double y = double.Parse(textBox2.Text);
-            double z = double.Parse(textBox3.Text);
-            a = z + x + y;
-            textBox4.Text += Environment.NewLine + "X = " + x.ToString() + Environment.NewLine + "Y = " + y.ToString() + Environment.NewLine + "Z = " + z.ToString() + Environment.NewLine + "Результат = " + a.ToString();
+             double x = double.Parse(textBox1.Text); // Считывание значение X
+                textBox4.Text += Environment.NewLine + "X = " + x.ToString(); // Вывод значения X в окно
+            double y = double.Parse(textBox2.Text); // Cчитывание значение Y
+                textBox4.Text += Environment.NewLine + "Y = " + y.ToString(); // Вывод значения Y в окно
+            double z = double.Parse(textBox3.Text); // Считывание значение Z
+                textBox4.Text += Environment.NewLine + "Z = " + z.ToString(); // Вывод значения Z в окно
+                double q = 1 + (Math.Sin(x + y) * Math.Sin(x + y));
+                double b = (q / (Math.Abs(x - (2*y / (1 + (Math.Pow(x, 2) * Math.Pow(y, 2)))))));
+                double c = Math.Pow(Math.Cos(Math.Atan(1 / z)), 2);
+                double n = Math.Pow(x, (Math.Abs(y)));
+                double v = (b * n) + c;
+             textBox4.Text += Environment.NewLine + "Результат = " + v.ToString(); // Вывод значения V в окно
         }
         }
     }
